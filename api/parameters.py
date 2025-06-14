@@ -14,12 +14,12 @@ import platform
 # Process selections Generate Dados
 execute_data_ingestion = True               # It will play the ingestion pipeline
 execute_data_indicators = True              # It will play the indicators pipeline
-execute_data_prep_models = True             # It will play the data prep models pipeline (used to train the model)
+execute_data_prep_models = False             # It will play the data prep models pipeline (used to train the model)
 execute_daily_predict = True                # It will play the daily outcome pipeline, default is the last recent, but you can set another date in enrichment file
 
 
 # Process selections Train/Test Models and Performance
-execute_filtered = False                    # It will filter symbols by the filter_symbols parameter
+execute_filtered = True                    # It will filter symbols by the filter_symbols parameter
 execute_only_stable_crypto = True           # It will filter a list of +400 cryptos that are considered stable. It will avoid to get all the cryptos in API request when collecting the data. It will only be used if execute_filtered is False
 execute_train_models = False                # It will play the train models pipeline (it will sobescribe the version_model, or set a new value in version_model)
 execute_filtered_models = True              # Filter models directly in training

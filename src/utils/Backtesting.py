@@ -23,25 +23,25 @@ class RealBacktest():
         return table
 
 ##### Currently not used
-    def specific_crypto_return(self, dataframe, crypto = 'BTC-USD', tabular = True):
+    # def specific_crypto_return(self, dataframe, crypto = 'BTC-USD', tabular = True):
 
-        df = self.query_data(dataframe, crypto)
+    #     df = self.query_data(dataframe, crypto)
 
-        df.set_index(['Date'], inplace=True)
+    #     df.set_index(['Date'], inplace=True)
 
-        prices = df['Close']
-        entrada = df['final_buy_signal'] == 1
-        saida = df['sell_signal'] == 1
+    #     prices = df['Close']
+    #     entrada = df['final_buy_signal'] == 1
+    #     saida = df['sell_signal'] == 1
         
-        pf = vbt.Portfolio.from_signals(close=prices, entries=entrada , exits=saida)    
+    #     pf = vbt.Portfolio.from_signals(close=prices, entries=entrada , exits=saida)    
         
-        if tabular == True: #csv
-            total_return = pf.total_return()
-        else: #imagens
-            total_return = pf.plot().show()
+    #     if tabular == True: #csv
+    #         total_return = pf.total_return()
+    #     else: #imagens
+    #         total_return = pf.plot().show()
 
 
-        return total_return
+    #     return total_return
 
     def all_crypto_return(self, dataset):
 
@@ -68,7 +68,7 @@ class RealBacktest():
                 result.append({
                     'crypto': crypto,
                     'total_return': total_return,
-                    **stats.to_dict()
+                    **stats.to_dict() # type: ignore
                 })
             except Exception as e:
                 print(f"An error occurred for {crypto}: {e}")
@@ -216,7 +216,7 @@ class RealBacktest():
         
         # Convert list of results to DataFrame and save
         backtest_dataset_return_df = pd.DataFrame(backtest_dataset_return, columns=result_columns)
-        backtest_dataset_return_df['reached_target'] = backtest_dataset_return_df.apply(self.reached_target_row, axis=1)        
+        backtest_dataset_return_df['reached_target'] = backtest_dataset_return_df.apply(self.reached_target_row, axis=1)         # type: ignore
         
         daily_output_filename = f'{parameters.path_model_backtest}/_simple_backtest_{parameters.version_model}_{parameters.min_threshold_signals}_.csv'
 
