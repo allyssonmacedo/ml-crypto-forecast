@@ -1,13 +1,13 @@
 from pathlib import Path
-from src.crypto_modules.FileHandle import FileHandling
-from src.crypto_modules.Train import Models
-from src.crypto_modules.PrepModels import DataPrep
-from src.crypto_modules.Predict import Deploy
-from src.crypto_modules.Ingestion import DataIngestion
-from src.crypto_modules.Signals import Backtesting
-from src.crypto_modules.Features import Features
-from src.crypto_modules.Backtesting import RealBacktest
-from jobs.constants import Constants
+from crypto_modules.FileHandle import FileHandling
+from crypto_modules.Train import Models
+from crypto_modules.PrepModels import DataPrep
+from crypto_modules.Predict import Deploy
+from crypto_modules.Ingestion import DataIngestion
+from crypto_modules.Signals import Backtesting
+from crypto_modules.Features import Features
+from crypto_modules.Backtesting import RealBacktest
+from constants import Constants
 import platform
 
 
@@ -53,7 +53,8 @@ active_date_symbol = '2024-10-01'   ## Set the max date to consider a valid crip
 recent_date_symbol = '2022-10-01'   ## Set the min date to consider a valid cripto (avoid collect crypto that is too recent and we can't calculate for 200 window)
 
 filter_symbols = [ # Filter symbols only when the execute_filtered is True
-    'BTC-USD', 'ETH-USD', 'BNB-USD', 'SOL-USD', 'XRP-USD', 'DOGE-USD', 'TRX-USD', 'ADA-USD', 'AVAX-USD', 'SHIB-USD',
+    'PENDLE-USD', 'NEAR-USD'
+    # 'BTC-USD', 'ETH-USD', 'BNB-USD', 'SOL-USD', 'XRP-USD', 'DOGE-USD', 'TRX-USD', 'ADA-USD', 'AVAX-USD', 'SHIB-USD',
     # 'DOT-USD', 'BCH-USD', 'LINK-USD', 'LTC-USD', 'MATIC-USD', 'XMR-USD', 'XLM-USD', 'ETC-USD','UNI-USD', 'AAVE-USD',  
     # 'FIL-USD', 'VET-USD', 'ATOM-USD', 'CRO-USD', 'THETA-USD', 'FTM-USD', 'ALGO-USD', 'ZEC-USD', 'DASH-USD', 'EOS-USD',
     # 'XTZ-USD', 'OMG-USD', 'KSM-USD', 'ZIL-USD', 'ICX-USD', 'QTUM-USD','NANO-USD', 'ONT-USD', 'WAVES-USD', 'BAT-USD', 
