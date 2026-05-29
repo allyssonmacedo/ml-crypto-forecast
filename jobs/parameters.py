@@ -53,8 +53,7 @@ active_date_symbol = '2024-10-01'   ## Set the max date to consider a valid crip
 recent_date_symbol = '2022-10-01'   ## Set the min date to consider a valid cripto (avoid collect crypto that is too recent and we can't calculate for 200 window)
 
 filter_symbols = [ # Filter symbols only when the execute_filtered is True
-    'PENDLE-USD', 'NEAR-USD'
-    # 'BTC-USD', 'ETH-USD', 'BNB-USD', 'SOL-USD', 'XRP-USD', 'DOGE-USD', 'TRX-USD', 'ADA-USD', 'AVAX-USD', 'SHIB-USD',
+    'BTC-USD', 'ETH-USD', 'BNB-USD', 'SOL-USD', 'XRP-USD', 'DOGE-USD', 'TRX-USD', 'ADA-USD', 'AVAX-USD', 'SHIB-USD',
     # 'DOT-USD', 'BCH-USD', 'LINK-USD', 'LTC-USD', 'MATIC-USD', 'XMR-USD', 'XLM-USD', 'ETC-USD','UNI-USD', 'AAVE-USD',  
     # 'FIL-USD', 'VET-USD', 'ATOM-USD', 'CRO-USD', 'THETA-USD', 'FTM-USD', 'ALGO-USD', 'ZEC-USD', 'DASH-USD', 'EOS-USD',
     # 'XTZ-USD', 'OMG-USD', 'KSM-USD', 'ZIL-USD', 'ICX-USD', 'QTUM-USD','NANO-USD', 'ONT-USD', 'WAVES-USD', 'BAT-USD', 
