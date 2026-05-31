@@ -4,11 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crypto_modules"
-version = "0.1.0"
+version = "1.1.0"
 description = "Machine Learning for crypto forecast"
+readme = "README.md"
+license = { text = "MIT" }
 authors = [
   { name = "Allysson Macedo", email = "allyssonvsmacedo@gmail.com" }
 ]
+keywords = ["crypto", "forecast", "machine-learning", "technical-analysis"]
 dependencies = [
   "asttokens==3.0.0",
   "beautifulsoup4==4.13.4",
@@ -84,4 +87,17 @@ dependencies = [
   "xgboost==3.0.2",
   "yfinance==0.2.63"
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+  "jupyter>=1.0.0",
+  "jupyterlab>=4.0.0",
+  "pytest>=7.0.0",
+]
+
+[tool.setuptools]
+packages = ["crypto_modules"]
+
+[tool.setuptools.package-dir]
+"" = "src"
