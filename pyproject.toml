@@ -1,0 +1,28 @@
+[project]
+name = "crypto-ml-forecast"
+version = "1.2.0"
+description = "Machine Learning for crypto forecast"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Allysson Macedo", email = "allyssonvsmacedo@gmail.com" }
+]
+keywords = ["crypto", "forecast", "machine-learning", "technical-analysis"]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "scikit-learn>=1.4",
+  "scipy>=1.11",
+  "xgboost>=2.0",
+  "yfinance>=0.2",
+  "plotly>=5.20",
+  "pandas-ta",
+  "numba>=0.59",
+  "requests>=2.31",
+  "pyarrow>=20.0.0",
+  "vectorbt==0.27.3",
+  "imbalanced-learn==0.13.0",
+]
+
+requires-python = ">=3.12"

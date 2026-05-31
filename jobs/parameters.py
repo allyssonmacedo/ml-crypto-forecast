@@ -1,13 +1,13 @@
 from pathlib import Path
-from src.utils.FileHandle import FileHandling
-from src.utils.Train import Models
-from src.utils.PrepModels import DataPrep
-from src.utils.Predict import Deploy
-from src.utils.Ingestion import DataIngestion
-from src.utils.Signals import Backtesting
-from src.utils.Features import Features
-from src.utils.Backtesting import RealBacktest
-from api.constants import Constants
+from crypto_modules.FileHandle import FileHandling
+from crypto_modules.Train import Models
+from crypto_modules.PrepModels import DataPrep
+from crypto_modules.Predict import Deploy
+from crypto_modules.Ingestion import DataIngestion
+from crypto_modules.Signals import Backtesting
+from crypto_modules.Features import Features
+from crypto_modules.Backtesting import RealBacktest
+from constants import Constants
 import platform
 
 

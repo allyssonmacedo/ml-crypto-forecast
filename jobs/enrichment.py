@@ -23,14 +23,14 @@ if parameters.execute_historical_predict:
 if parameters.execute_daily_predict:
     parameters.cls_Predict.daily_outcome(cls_Models, parameters, '')
 
-if parameters.execute_signals: 
-    parameters.cls_Signals.build_signals(parameters)
-
 if parameters.execute_backtest: 
     parameters.cls_RealBacktest.backtest_models(parameters)
 
 if parameters.execute_backtest_simple: 
     parameters.cls_RealBacktest.all_entries_backtest(parameters)
+
+if parameters.execute_signals: 
+    parameters.cls_Signals.build_signals(parameters)
 
 if parameters.execute_simulations: 
     parameters.cls_RealBacktest.simulator(parameters)

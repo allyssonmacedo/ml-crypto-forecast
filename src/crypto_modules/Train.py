@@ -162,7 +162,7 @@ class Models():
     def build_log_model(self, name_file, name_model, target_col, eval_model_tuple, version, dest_path): 
 
         matrix, auc, score_cal = eval_model_tuple
-        
+
         # Dados
         data = {
             'name_file': [name_file],
@@ -180,8 +180,10 @@ class Models():
             'auc_roc': [auc]
         }
         df = pd.DataFrame(data)
-
-        df['f1_score'] = 2 * ((df['precision'] * df['recall']) / (df['precision'] + df['recall'])) # F1 Score: Média harmônica da precisão e da revocação, usada para balancear os trade-offs entre essas duas métricas.
+        
+        # F1 Score: Média harmônica da precisão e da revocação, usada para balancear os trade-offs entre essas duas métricas.atrix, auc, score_cal = eval_model_tuple
+        df['f1_score'] = 2 * ((df['precision'] * df['recall']) / (df['precision'] + df['recall'])) 
+       
         
         # Apendar o DataFrame em um arquivo CSV de resultado
         df.to_csv(dest_path, mode='a', index=False, header=False)
