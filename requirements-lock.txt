@@ -9,3 +9,6 @@ plotly>=5.20
 pandas-ta
 numba>=0.59
 requests>=2.31
+pyarrow>=20.0.0
+vectorbt==0.27.3
+imbalanced-learn==0.13.0
